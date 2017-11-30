@@ -16,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.fragment).setOnClickListener(this::onClick);
         findViewById(R.id.v4fragment).setOnClickListener(this::onClick);
 
-        RxLifecycle.with(this).toObservable().subscribe(integer -> Log.e("wcwcwc", "lifecycle: " + integer));
+        RxLifecycle.with(this)
+                .toObservable()
+                .subscribe(integer -> Log.e("wcwcwc", "lifecycle: " + integer));
     }
 
     private void onClick(View v){
